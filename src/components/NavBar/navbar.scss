@@ -1,0 +1,92 @@
+.nav_navbar {
+    background: #43C6AC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom left, #2980B9, #fff, #6DD5FA);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom left, #2980B9, #fff, #6DD5FA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 10vh;
+}
+
+.nav_navbar-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    
+    &_logo {
+        flex-grow: 0.5;
+    }
+
+    &_item {
+        
+        button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            display: flex;
+            font-size: 1.2rem;
+            font-weight: 500;
+            background-color: transparent;
+            color:#2c5364;
+            // letter-spacing: 0.1rem;
+        }
+
+    }
+
+    &_submenu {
+        position: relative;
+
+        svg {
+            display: none;
+        }
+
+        .hidden {
+            position: absolute;
+            top: 1rem;
+            right: -10rem;
+            // opacity: 0;
+        }
+
+        .displayed {
+            display: flex;
+        }
+    }
+}
+
+@media screen and (max-width: 520px){
+    .nav_navbar-links_item {
+        display: none;
+    }
+
+    .nav_navbar-links_submenu{
+        position: relative;
+
+        svg {
+            display: block;
+            cursor: pointer;
+        }
+
+        .displayed {
+            transition: right 1s linear;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 1rem;
+            right: -2.8rem;
+            background: #43C6AC;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #2c5364, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #2c5364, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            display: flex;
+            font-size: 1.2rem;
+            font-weight: 500;
+            background-color: transparent;
+            letter-spacing: 0.1rem;
+        }
+    } 
+
+}

@@ -1,0 +1,21 @@
+.places {
+    background-image: url('../../../assets/pick-places.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    min-height: 800px;
+    position: relative;
+
+    .places-btn {
+        position: absolute;
+        right: 18rem;
+        top: 1rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg,#2980b9 20%,#6dd5fa 100%);
+        cursor: pointer;
+        height: 90px;
+        width: 90px;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+}
